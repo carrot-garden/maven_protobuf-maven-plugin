@@ -282,6 +282,7 @@ public class RunMojo extends AbstractMojo {
             project.addTestCompileSourceRoot( outputDirectory.getAbsolutePath() );
         }
         if (mainAddSources || testAddSources){
+            getLog().info("Refreshing output directory");
             buildContext.refresh(outputDirectory);
         }
     }
